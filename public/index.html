@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stopwatch</title>
+<meta name="description" content="シンプルなストップウォッチ．ラップ計測とキーボード操作に対応．">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%E2%8F%B1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+  <h1 class="title">Stopwatch</h1>
+
+  <div class="display" id="display" role="timer" aria-live="off" aria-atomic="true">00:00.00</div>
+
+  <div class="controls">
+    <button id="toggle" class="btn btn-primary" type="button">スタート</button>
+    <button id="secondary" class="btn btn-ghost" type="button" disabled>リセット</button>
+  </div>
+
+  <ol class="laps" id="laps" aria-label="ラップ一覧"></ol>
+
+  <p class="hint">
+    <kbd>Space</kbd> 開始 / 停止 &nbsp;·&nbsp; <kbd>L</kbd> ラップ &nbsp;·&nbsp; <kbd>R</kbd> リセット
+  </p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
