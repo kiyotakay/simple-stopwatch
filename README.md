@@ -2,6 +2,8 @@
 
 シンプルなストップウォッチのWebサイト．依存ライブラリなしの静的サイトです．
 
+**公開先: https://simple-stopwatch.pages.dev**
+
 ## 機能
 
 - 1/100秒（センチ秒）精度の計測
@@ -20,7 +22,7 @@ public/
   index.html
   styles.css
   app.js
-wrangler.jsonc    # Cloudflare Workers (static assets) の設定
+wrangler.jsonc    # Cloudflare Pages の設定
 ```
 
 ## ローカルで動かす
@@ -28,13 +30,13 @@ wrangler.jsonc    # Cloudflare Workers (static assets) の設定
 `public/index.html` をブラウザで開くだけで動きます．Wranglerを使う場合は:
 
 ```bash
-npx wrangler dev
+npx wrangler pages dev public
 ```
 
 ## デプロイ
 
-Cloudflare Workers の静的アセット機能で配信しています．
+Cloudflare Pages で配信しています．
 
 ```bash
-npx wrangler deploy
+npx wrangler pages deploy public --project-name simple-stopwatch --branch main
 ```
